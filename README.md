@@ -1,79 +1,94 @@
-# 🛡️ AWS Cloud Security Operations Lab
+# 🛡️ AWS Cloud SOC Lab
 
-This project simulates a **Security Operations Center (SOC)** using **AWS services** to detect and respond to cloud-based threats. It demonstrates setting up:
+This lab simulates a real-world **Security Operations Center (SOC)** using AWS services. It showcases:
 
-- EC2 instance (as an asset)
-- Amazon GuardDuty (for threat detection)
-- AWS Security Hub (for centralized findings)
-
-## 🚀 Objectives
-
-- Simulate real-world threat scenarios (e.g., SSH brute force)
-- Use GuardDuty to automatically detect threats
-- Aggregate findings in Security Hub for analysis
-- Learn foundational skills in Cloud SOC operations
+- 🖥️ EC2 (simulated asset)
+- 🕵️ GuardDuty (threat detection)
+- 🧩 Security Hub (alert aggregation)
 
 ---
 
-## 🧱 Architecture
+## 🧱 Project Overview Diagram
 
-![AWS Cloud Architecture](./architecture.png)
+_(Optional architecture visual — add if available)_
 
----
-
-## 📁 Project Structure
-
-| File/Folder | Description |
-|-------------|-------------|
-| `/docs/` | Detailed step-by-step setup instructions |
-| `/images/` | Screenshots of the cloud setup |
-| `architecture.png` | Network & services architecture diagram |
-| `README.md` | Overview and main documentation |
+![Architecture Diagram](./architecture.png)
 
 ---
 
-## 📄 Setup Documentation
+## 🚀 Step-by-Step Setup
 
-- 📦 [`EC2 Setup`](./docs/ec2-setup.md)
-- 🕵️ [`GuardDuty Setup`](./docs/guardduty-setup.md)
-- 🧩 [`Security Hub Setup`](./docs/security-hub-setup.md)
+### 1️⃣ Launch an EC2 Instance
 
----
+We use EC2 to simulate a vulnerable cloud asset.
 
-## 📸 Sample Screenshots
+#### Configuration:
+- **AMI:** Amazon Linux 2
+- **Instance type:** t2.micro (free tier)
+- **Inbound rule:** SSH (port 22) open to `0.0.0.0/0`  
+  > This allows us to simulate SSH brute-force attacks
 
-| EC2 | GuardDuty | Security Hub |
-|-----|-----------|--------------|
-| ![](./images/ec2-1.png) | ![](./images/guardduty-1.png) | ![](./images/securityhub-1.png) |
-
----
-
-## 🧠 Skills Gained
-
-- AWS EC2 provisioning
-- Threat detection with Amazon GuardDuty
-- Findings correlation with AWS Security Hub
-- Incident simulation and response
+![EC2 Screenshot](./images/ec2-1.png)
 
 ---
 
-## 📚 Technologies Used
+### 2️⃣ Enable Amazon GuardDuty
 
-- AWS EC2
-- Amazon GuardDuty
-- AWS Security Hub
-- AWS Console
+GuardDuty is AWS’s intelligent threat detection service.
+
+#### Setup:
+- Go to **Amazon GuardDuty**
+- Click **Enable**
+- It auto-monitors: VPC Flow Logs, CloudTrail, and DNS logs
+
+#### Example Finding:
+> 🛑 `UnauthorizedAccess:EC2/SSHBruteForce`
+
+![GuardDuty Screenshot](./images/guardduty-1.png)
 
 ---
 
-## 🧑‍🎓 Author
+### 3️⃣ Set Up AWS Security Hub
+
+Security Hub collects and correlates findings from GuardDuty and other services.
+
+#### Setup:
+- Go to **AWS Security Hub**
+- Click **Enable**
+- Integrates with GuardDuty by default
+
+#### Benefits:
+- Single-pane view of alerts
+- Prioritize alerts by severity
+
+![Security Hub Screenshot](./images/securityhub-1.png)
+
+---
+
+## 🔍 What I Learned
+
+- How to simulate threat detection using AWS
+- The role of each AWS service in cloud security
+- How alerts are generated, visualized, and triaged
+
+---
+
+## 🧠 Technologies Used
+
+- AWS EC2  
+- Amazon GuardDuty  
+- AWS Security Hub  
+
+---
+
+## 👨‍🎓 Author
 
 **Anthony Bayate Jr.**  
-📍 Cybersecurity & IT Student at Kean University  
-🔗 [LinkedIn](https://linkedin.com/in/abayate) | [GitHub](https://github.com/abayate)
+Cybersecurity & IT Student, Kean University  
+[LinkedIn](https://linkedin.com/in/abayate) • [GitHub](https://github.com/abayate)
 
 ---
 
 ## 📜 License
 
-[MIT License](./LICENSE)
+This project is under the [MIT License](./LICENSE)
