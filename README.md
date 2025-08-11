@@ -19,7 +19,7 @@ Use EC2 to simulate a vulnerable cloud asset.
 - **Inbound rule:** SSH (port 22) open to `0.0.0.0/0`  
   > This allows us to simulate SSH brute-force attacks
 
-![EC2 Screenshot](ec2.pdf)
+[EC2 Screenshot](ec2.pdf)
 
 ---
 
