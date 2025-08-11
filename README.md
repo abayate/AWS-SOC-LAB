@@ -6,21 +6,12 @@ This lab simulates a real-world **Security Operations Center (SOC)** using AWS s
 - 🕵️ GuardDuty (threat detection)
 - 🧩 Security Hub (alert aggregation)
 
----
-
-## 🧱 Project Overview Diagram
-
-_(Optional architecture visual — add if available)_
-
-![Architecture Diagram](./architecture.png)
-
----
 
 ## 🚀 Step-by-Step Setup
 
 ### 1️⃣ Launch an EC2 Instance
 
-We use EC2 to simulate a vulnerable cloud asset.
+Use EC2 to simulate a vulnerable cloud asset.
 
 #### Configuration:
 - **AMI:** Amazon Linux 2
@@ -44,7 +35,7 @@ GuardDuty is AWS’s intelligent threat detection service.
 #### Example Finding:
 > 🛑 `UnauthorizedAccess:EC2/SSHBruteForce`
 
-![GuardDuty Screenshot](./images/guardduty-1.png)
+![GuardDuty Screenshot]()
 
 ---
 
@@ -61,7 +52,7 @@ Security Hub collects and correlates findings from GuardDuty and other services.
 - Single-pane view of alerts
 - Prioritize alerts by severity
 
-![Security Hub Screenshot](./images/securityhub-1.png)
+![Security Hub Screenshot]()
 
 ---
 
