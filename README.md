@@ -35,7 +35,7 @@ GuardDuty is AWS’s intelligent threat detection service.
 #### Example Finding:
 > 🛑 `UnauthorizedAccess:EC2/SSHBruteForce`
 
-![GuardDuty Screenshot]()
+[GuardDuty Screenshot]()
 
 ---
 
@@ -52,7 +52,7 @@ Security Hub collects and correlates findings from GuardDuty and other services.
 - Single-pane view of alerts
 - Prioritize alerts by severity
 
-![Security Hub Screenshot]()
+[Security Hub Screenshot]()
 
 ---
 
