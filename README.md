@@ -78,8 +78,3 @@ Security Hub collects and correlates findings from GuardDuty and other services.
 Cybersecurity & IT Student, Kean University  
 [LinkedIn](https://linkedin.com/in/abayate) • [GitHub](https://github.com/abayate)
 
----
-
-## 📜 License
-
-This project is under the [MIT License](./LICENSE)
